@@ -37,6 +37,18 @@
           display: flex;
           align-items: center;
           justify-content: center;
+          user-select: none; /* supported by Chrome and Opera */
+          -webkit-user-select: none; /* Safari */
+          -khtml-user-select: none; /* Konqueror HTML */
+          -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+
+        }
+        .drum-pad:hover {
+          cursor: pointer;
+        }
+        .drum-pad:active {
+          background-color: #78b86b;
         }
       }
       .options-menu {
@@ -58,7 +70,10 @@
   }
 }
 
-
+// ::selection {
+//   color: none;
+//   background-color: none;
+// }
 
 
 

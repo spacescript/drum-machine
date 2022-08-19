@@ -7,31 +7,31 @@ function App() {
         <div className="button-display" id="button-display">
           <div className="button-panel" id="button-panel">
             <div className="drum-pad" id="drum-pad-1">
-              <audio src="" id="Q"></audio>Q
+              <audio src="media/Armor KaClang Effect.mp3" id="Q"></audio>Q
             </div>
             <div className="drum-pad" id="drum-pad-2">
-              <audio src="" id="W"></audio>W
+              <audio src="media/Blue Horror Blast.mp3" id="W"></audio>W
             </div>
             <div className="drum-pad" id="drum-pad-3">
-              <audio src="" id="E"></audio>E
+              <audio src="media/Bow and Arrow Sound Effect.mp3" id="E"></audio>E
             </div>
             <div className="drum-pad" id="drum-pad-4">
-              <audio src="" id="A"></audio>A
+              <audio src="media/Knife Stab Sound Effect.mp3" id="A"></audio>A
             </div>
             <div className="drum-pad" id="drum-pad-5">
-              <audio src="" id="S"></audio>S
+              <audio src="media/Skyrim Sound Effects - Guard Speech  Sweetroll.mp3" id="S"></audio>S
             </div>
             <div className="drum-pad" id="drum-pad-6">
-              <audio src="" id="D"></audio>D
+              <audio src="media/Skyrim Sound Effects - New Quest.mp3" id="D"></audio>D
             </div>
             <div className="drum-pad" id="drum-pad-7">
-              <audio src="" id="Z"></audio>Z
+              <audio src="media/Skyrim Sound Effects - Shaking Dungeon.mp3" id="Z"></audio>Z
             </div>
             <div className="drum-pad" id="drum-pad-8">
-              <audio src="" id="X"></audio>X
+              <audio src="media/Sword Sound Effect   Sword Slash Sound Effect   Knife Slash Sound Effect   Blade Sound Effect.mp3" id="X"></audio>X
             </div>
             <div className="drum-pad" id="drum-pad-9">
-              <audio src="" id="C"></audio>C
+              <audio src="media/Wilhelm Scream sound effect.mp3" id="C"></audio>C
             </div>
           </div>
           <div className="options-menu" id="options-menu">
