@@ -1,6 +1,8 @@
 import './App.scss';
 
 function App() {
+  // document.querySelector('drum-pad').addEventListener('click', () => {autoplay})
+
   return (
     <div className="App">
       <div className="drum-machine" id="drum-machine">
