@@ -1,11 +1,16 @@
 import './App.scss';
-import drum-machine from ".Media/Armor KaClang Effect"
+import ArmorKlang from "./Media/Armor KaClang Effect.mp3"
 
 function App() {
-  let sounder = document.querySelectorAll('clip')
+  // let sounder = document.querySelectorAll('clip')
   
+  // const playSound = () => {
+  //   this.addEventListener('click', this.play);
+  // }
+
   const playSound = () => {
-    sounder.addEventListener('click', play);
+    var x = document.getElementById("Q");
+    x.play();
   }
   
 
@@ -14,9 +19,9 @@ function App() {
       <div className="drum-machine" id="drum-machine">
         <div className="button-display" id="button-display">
           <div className="button-panel" id="button-panel">
-            <div className="drum-pad" id="drum-pad-1">
+            <button className="drum-pad" id="drum-pad-1">
               <audio src="media/Armor KaClang Effect.mp3" className="clip" id="Q" type="audio/mpeg" onClick={playSound} ></audio>Q
-            </div>
+            </button>
             <div className="drum-pad" id="drum-pad-2">
               <audio src="media/Blue Horror Blast.mp3" className="clip" id="W" type="audio/mpeg"></audio>W
             </div>
