@@ -1,8 +1,12 @@
 import './App.scss';
+import drum-machine from ".Media/Armor KaClang Effect"
 
 function App() {
-    // document.querySelectorAll('clip').addEventListener('click', play);
- 
+  let sounder = document.querySelectorAll('clip')
+  
+  const playSound = () => {
+    sounder.addEventListener('click', play);
+  }
   
 
   return (
@@ -11,31 +15,31 @@ function App() {
         <div className="button-display" id="button-display">
           <div className="button-panel" id="button-panel">
             <div className="drum-pad" id="drum-pad-1">
-              <audio src="media/Armor KaClang Effect.mp3" className="clip" id="Q"></audio>Q
+              <audio src="media/Armor KaClang Effect.mp3" className="clip" id="Q" type="audio/mpeg" onClick={playSound} ></audio>Q
             </div>
             <div className="drum-pad" id="drum-pad-2">
-              <audio src="media/Blue Horror Blast.mp3" className="clip" id="W"></audio>W
+              <audio src="media/Blue Horror Blast.mp3" className="clip" id="W" type="audio/mpeg"></audio>W
             </div>
             <div className="drum-pad" id="drum-pad-3">
-              <audio src="media/Bow and Arrow Sound Effect.mp3" className="clip" id="E"></audio>E
+              <audio src="media/Bow and Arrow Sound Effect.mp3" className="clip" id="E" type="audio/mpeg"></audio>E
             </div>
             <div className="drum-pad" id="drum-pad-4">
-              <audio src="media/Knife Stab Sound Effect.mp3" className="clip" id="A"></audio>A
+              <audio src="media/Knife Stab Sound Effect.mp3" className="clip" id="A" type="audio/mpeg"></audio>A
             </div>
             <div className="drum-pad" id="drum-pad-5">
-              <audio src="media/Skyrim Sound Effects - Guard Speech  Sweetroll.mp3" className="clip" id="S"></audio>S
+              <audio src="media/Skyrim Sound Effects - Guard Speech  Sweetroll.mp3" className="clip" id="S" type="audio/mpeg"></audio>S
             </div>
             <div className="drum-pad" id="drum-pad-6">
-              <audio src="media/Skyrim Sound Effects - New Quest.mp3" className="clip" id="D"></audio>D
+              <audio src="media/Skyrim Sound Effects - New Quest.mp3" className="clip" id="D" type="audio/mpeg"></audio>D
             </div>
             <div className="drum-pad" id="drum-pad-7">
-              <audio src="media/Skyrim Sound Effects - Shaking Dungeon.mp3" className="clip" id="Z"></audio>Z
+              <audio src="media/Skyrim Sound Effects - Shaking Dungeon.mp3" className="clip" id="Z" type="audio/mpeg"></audio>Z
             </div>
             <div className="drum-pad" id="drum-pad-8">
-              <audio src="media/Sword Sound Effect   Sword Slash Sound Effect   Knife Slash Sound Effect   Blade Sound Effect.mp3" className="clip" id="X"></audio>X
+              <audio src="media/Sword Sound Effect   Sword Slash Sound Effect   Knife Slash Sound Effect   Blade Sound Effect.mp3" className="clip" id="X" type="audio/mpeg"></audio>X
             </div>
             <div className="drum-pad" id="drum-pad-9">
-              <audio src="media/Wilhelm Scream sound effect.mp3" className="clip" id="C"></audio>C
+              <audio src="media/Wilhelm Scream sound effect.mp3" className="clip" id="C" type="audio/mpeg"></audio>C
             </div>
           </div>
           <div className="options-menu" id="options-menu">
