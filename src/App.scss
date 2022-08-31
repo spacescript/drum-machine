@@ -21,6 +21,7 @@
     .button-display {
       display: grid;
       grid-template-columns: 50% 50%;
+      box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
       .button-panel{
         padding: 10px;
         display: grid;
@@ -49,6 +50,7 @@
         }
         .drum-pad:active {
           background-color: #78b86b;
+          transform: scale(.90);
         }
       }
       .options-menu {
