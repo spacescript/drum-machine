@@ -10,12 +10,12 @@ function App() {
 
   const playSound = () => {
     // var x = document.getElementById("Q");
-    this.play();
+    this.audio.current.play();
   }
 
-  const report = () => {
-    console.log('Report here');
-  }
+  // const report = () => {
+  //   console.log('Report here');
+  // }
   
 
   return (
@@ -24,7 +24,7 @@ function App() {
         <div className="button-display" id="button-display">
           <div className="button-panel" id="button-panel">
             <button className="drum-pad" id="drum-pad-1">
-              <audio src="media/Armor KaClang Effect.mp3" className="clip" id="Q" type="audio/mpeg" onClick={report} ></audio>Q
+              <audio src="media/Armor KaClang Effect.mp3" className="clip" id="Q" type="audio/mpeg" onClick={playSound} ></audio>Q
             </button>
             <div className="drum-pad" id="drum-pad-2">
               <audio src="media/Blue Horror Blast.mp3" className="clip" id="W" type="audio/mpeg"></audio>W
