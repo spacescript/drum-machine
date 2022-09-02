@@ -1,5 +1,7 @@
 import './App.scss';
-import ArmorKlang from "./Media/Armor KaClang Effect.mp3"
+import ArmorKlang from "./Media/Armor KaClang Effect.mp3";
+import BlueBlast from "./Media/Blue Horror Blast.mp3";
+import BowSound from "./Media/Bow and Arrow Sound Effect.mp3";
 
 function App() {
   // let sounder = document.querySelectorAll('clip')
