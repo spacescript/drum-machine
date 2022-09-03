@@ -8,23 +8,23 @@ import { Howl } from "howler"
 function App() {
   // let sounder = document.querySelectorAll('clip')
   
-  // const soundSrc = ArmorKlang;
-  // const playSound = (src) => {
-  //   const sound = new Howl({
-  //     src, 
-  //     html5: true,
-  //   });
-  //   sound.play()
-  // }
+  const soundSrc = ArmorKlang;
+  const playSound = (src) => {
+    const sound = new Howl({
+      src, 
+      html5: true,
+    });
+    sound.play()
+  }
 
   // const playSound = () => {
   //   // var x = document.getElementById("Q");
   //   this.audio.current.play();
   // }
 
-  const report = () => {
-    console.log('Report here');
-  }
+  // const runReport = () => {
+  //   console.log('Report here');
+  // }
   
 
   return (
@@ -32,8 +32,8 @@ function App() {
       <div className="drum-machine" id="drum-machine">
         <div className="button-display" id="button-display">
           <div className="button-panel" id="button-panel">
-            <div className="drum-pad" id="drum-pad-1">
-              <audio src="media/Armor KaClang Effect.mp3" className="clip" id="Q" type="audio/mpeg" onClick={() => report} ></audio>Q
+            <div className="drum-pad" id="drum-pad-1" onClick={playSound(ArmorKlang)}>
+              <audio src="media/Armor KaClang Effect.mp3" className="clip" id="Q" type="audio/mpeg"></audio>Q
             </div>
             <div className="drum-pad" id="drum-pad-2">
               <audio src="media/Blue Horror Blast.mp3" className="clip" id="W" type="audio/mpeg"></audio>W
