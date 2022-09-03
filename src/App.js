@@ -1,23 +1,30 @@
 import './App.scss';
 import ArmorKlang from "./Media/Armor KaClang Effect.mp3";
-import BlueBlast from "./Media/Blue Horror Blast.mp3";
-import BowSound from "./Media/Bow and Arrow Sound Effect.mp3";
+// import BlueBlast from "./Media/Blue Horror Blast.mp3";
+// import BowSound from "./Media/Bow and Arrow Sound Effect.mp3";
+
+import { Howl } from "howler"
 
 function App() {
   // let sounder = document.querySelectorAll('clip')
   
+  // const soundSrc = ArmorKlang;
+  // const playSound = (src) => {
+  //   const sound = new Howl({
+  //     src, 
+  //     html5: true,
+  //   });
+  //   sound.play()
+  // }
+
   // const playSound = () => {
-  //   this.addEventListener('click', this.play);
+  //   // var x = document.getElementById("Q");
+  //   this.audio.current.play();
   // }
 
-  const playSound = () => {
-    // var x = document.getElementById("Q");
-    this.audio.current.play();
+  const report = () => {
+    console.log('Report here');
   }
-
-  // const report = () => {
-  //   console.log('Report here');
-  // }
   
 
   return (
@@ -25,9 +32,9 @@ function App() {
       <div className="drum-machine" id="drum-machine">
         <div className="button-display" id="button-display">
           <div className="button-panel" id="button-panel">
-            <button className="drum-pad" id="drum-pad-1">
-              <audio src="media/Armor KaClang Effect.mp3" className="clip" id="Q" type="audio/mpeg" onClick={playSound} ></audio>Q
-            </button>
+            <div className="drum-pad" id="drum-pad-1">
+              <audio src="media/Armor KaClang Effect.mp3" className="clip" id="Q" type="audio/mpeg" onClick={() => report} ></audio>Q
+            </div>
             <div className="drum-pad" id="drum-pad-2">
               <audio src="media/Blue Horror Blast.mp3" className="clip" id="W" type="audio/mpeg"></audio>W
             </div>
