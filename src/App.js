@@ -8,7 +8,7 @@ import { Howl } from "howler"
 function App() {
   // let sounder = document.querySelectorAll('clip')
   
-  const soundSrc = ArmorKlang;
+  // const soundSrc = ArmorKlang;
   const playSound = (src) => {
     const sound = new Howl({
       src, 
