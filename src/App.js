@@ -4,6 +4,7 @@ import ArmorKlang from "./Media/Armor KaClang Effect.mp3";
 // import BowSound from "./Media/Bow and Arrow Sound Effect.mp3";
 
 import { Howl } from "howler"
+import { click } from '@testing-library/user-event/dist/click';
 
 function App() {
   // let sounder = document.querySelectorAll('clip')
@@ -23,12 +24,11 @@ function App() {
   //   this.audio.current.play();
   // }
 
-  // const runReport = () => {
-  //   console.log('Report here');
-  // }
+  const mySound = new Audio(ArmorKlang);
 
   const clickSound = () => {
-    document.getElementById("Q").play();
+    // document.getElementById("Q").play();
+    mySound.play();
     // return console.log("Pressed Q");
   }
   
@@ -39,7 +39,7 @@ function App() {
         <div className="button-display" id="button-display">
           <div className="button-panel" id="button-panel">
             <div className="drum-pad" id="drum-pad-1" onClick={clickSound}>
-              <audio src="ArmorKlang" className="clip" id="Q" type="audio/mpeg"></audio>Q
+              <audio src="mySound" className="clip" id="Q" type="audio/mpeg"></audio>Q
             </div>
             <div className="drum-pad" id="drum-pad-2">
               <audio src="media/Blue Horror Blast.mp3" className="clip" id="W" type="audio/mpeg"></audio>W
