@@ -26,6 +26,11 @@ function App() {
   // const runReport = () => {
   //   console.log('Report here');
   // }
+
+  const clickSound = () => {
+    document.getElementById("Q").play();
+    // return console.log("Pressed Q");
+  }
   
 
   return (
@@ -33,8 +38,8 @@ function App() {
       <div className="drum-machine" id="drum-machine">
         <div className="button-display" id="button-display">
           <div className="button-panel" id="button-panel">
-            <div className="drum-pad" id="drum-pad-1">
-              <audio src="media/Armor KaClang Effect.mp3" className="clip" id="Q" type="audio/mpeg"></audio>Q
+            <div className="drum-pad" id="drum-pad-1" onClick={clickSound}>
+              <audio src="ArmorKlang" className="clip" id="Q" type="audio/mpeg"></audio>Q
             </div>
             <div className="drum-pad" id="drum-pad-2">
               <audio src="media/Blue Horror Blast.mp3" className="clip" id="W" type="audio/mpeg"></audio>W
