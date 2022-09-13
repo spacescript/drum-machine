@@ -93,7 +93,7 @@ function App() {
   //   ArmorKlang, BlueBlast, BowSound, KnifeStab, GuardSweetRoll, NewQuest, ShakingDungeon, SwordSlash, WilhelmScream
   // ]
 
-  const mySound = new Audio(ArmorKlang);
+  // const mySound = new Audio(ArmorKlang);
 
   // let mySound 
 
@@ -108,10 +108,14 @@ function App() {
   //   // return console.log({soundBank});
   // }
 
-  function playSound(selector) {
+  function playSound(ele) {
     // const thisAudio = document.getElementById(selector);
-    // thisAudio.play();
-    return console.log(selector)
+    const mySound = ele.target.children;
+    mySound.currentTime = 0;
+    mySound.play();
+    
+    // return console.log(selector.target)
+    return console.log(mySound)
   }
   
 
