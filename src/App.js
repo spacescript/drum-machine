@@ -1,16 +1,18 @@
 import './App.scss';
 import ArmorKlang from "./Media/Armor KaClang Effect.mp3";
-// import BlueBlast from "./Media/Blue Horror Blast.mp3";
-// import BowSound from "./Media/Bow and Arrow Sound Effect.mp3";
+import BlueBlast from "./Media/Blue Horror Blast.mp3";
+import BowSound from "./Media/Bow and Arrow Sound Effect.mp3";
+import KnifeStab from "./Media/Knife Stab Sound Effect.mp3";
+import GuardSweetRoll from "./Media/Skyrim Sound Effects - Guard Speech  Sweetroll.mp3";
+import NewQuest from "./Media/Skyrim Sound Effects - New Quest.mp3";
+import ShakingDungeon from "./Media/Skyrim Sound Effects - Shaking Dungeon.mp3";
+import SwordSlash from "./Media/Sword Sound Effect   Sword Slash Sound Effect   Knife Slash Sound Effect   Blade Sound Effect.mp3";
+import WilhelmScream from "./Media/Wilhelm Scream sound effect.mp3";
 
-import { Howl } from "howler"
-import { click } from '@testing-library/user-event/dist/click';
+// import { Howl } from "howler"
+// import { click } from '@testing-library/user-event/dist/click';
 
 function App() {
-  // let sounder = document.querySelectorAll('clip')
-  
-  // const soundSrc = ArmorKlang;
-
   // const playSound = (src) => {
   //   const sound = new Howl({
   //     src, 
@@ -18,16 +20,28 @@ function App() {
   //   });
   //   sound.play()
   // }
+  const soundList = [
+    ArmorKlang, BlueBlast, BowSound, KnifeStab, GuardSweetRoll, NewQuest, ShakingDungeon, SwordSlash, WilhelmScream
+  ]
 
-  // const playSound = () => {
-  //   // var x = document.getElementById("Q");
-  //   this.audio.current.play();
-  // }
-
+  // const mySound = new Audio(ArmorKlang);
   const mySound = new Audio(ArmorKlang);
 
+  const soundBank = [
+    {
+      keyCode: 81,
+      keyTrigger: 'Q',
+      id: 'Armor-Klang'
+      
+    }
+  ]
+
+  // let mySound 
+
   const clickSound = () => {
+    // mySound = new Audio(ArmorKlang);
     // document.getElementById("Q").play();
+    mySound.currentTime = 0;
     mySound.play();
     // return console.log("Pressed Q");
   }
