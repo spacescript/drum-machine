@@ -20,19 +20,77 @@ function App() {
   //   });
   //   sound.play()
   // }
-  const soundList = [
-    ArmorKlang, BlueBlast, BowSound, KnifeStab, GuardSweetRoll, NewQuest, ShakingDungeon, SwordSlash, WilhelmScream
-  ]
+  // const soundList = [
+  //   ArmorKlang, BlueBlast, BowSound, KnifeStab, GuardSweetRoll, NewQuest, ShakingDungeon, SwordSlash, WilhelmScream
+  // ]
 
   // const mySound = new Audio(ArmorKlang);
-  const mySound = new Audio(ArmorKlang);
+  const audios = {
+    'audio0': new Audio(ArmorKlang),
+    'audio1': new Audio(BlueBlast),
+    'audio2': new Audio(BowSound),
+    'audio3': new Audio(KnifeStab),
+    'audio4': new Audio(GuardSweetRoll),
+    'audio5': new Audio(NewQuest),
+    'audio6': new Audio(ShakingDungeon),
+    'audio7': new Audio(SwordSlash),
+    'audio8': new Audio(WilhelmScream)
+  } 
 
   const soundBank = [
     {
       keyCode: 81,
       keyTrigger: 'Q',
-      id: 'Armor-Klang'
-      
+      id: 'Armor-Klang',
+      audioKey: audios.audio0,
+    },
+    {
+      keyCode: 87,
+      keyTrigger: 'W',
+      id: 'Armor-Klang',
+      audioKey: audios.audio1,
+    },
+    {
+      keyCode: 69,
+      keyTrigger: 'E',
+      id: 'Armor-Klang',
+      audioKey: audios.audio2,
+    },
+    {
+      keyCode: 65,
+      keyTrigger: 'A',
+      id: 'Armor-Klang',
+      audioKey: audios.audio3,
+    },
+    {
+      keyCode: 83,
+      keyTrigger: 'S',
+      id: 'Armor-Klang',
+      audioKey: audios.audio4,
+    },
+    {
+      keyCode: 68,
+      keyTrigger: 'D',
+      id: 'Armor-Klang',
+      audioKey: audios.audio5,
+    },
+    {
+      keyCode: 90,
+      keyTrigger: 'Z',
+      id: 'Armor-Klang',
+      audioKey: audios.audio6,
+    },
+    {
+      keyCode: 88,
+      keyTrigger: 'X',
+      id: 'Armor-Klang',
+      audioKey: audios.audio7,
+    },
+    {
+      keyCode: 67,
+      keyTrigger: 'C',
+      id: 'Armor-Klang',
+      audioKey: audios.audio8,
     }
   ]
 
@@ -41,8 +99,11 @@ function App() {
   const clickSound = () => {
     // mySound = new Audio(ArmorKlang);
     // document.getElementById("Q").play();
+
+    // The good stuff
     mySound.currentTime = 0;
     mySound.play();
+
     // return console.log("Pressed Q");
   }
   
