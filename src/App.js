@@ -97,15 +97,21 @@ function App() {
 
   // let mySound 
 
-  const clickSound = () => {
-    // mySound = new Audio(ArmorKlang);
-    // document.getElementById("Q").play();
+  // const clickSound = () => {
+  //   // mySound = new Audio(ArmorKlang);
+  //   // document.getElementById("Q").play();
 
-    // The good stuff
-    mySound.currentTime = 0;
-    mySound.play();
+  //   // // The good stuff
+  //   // mySound.currentTime = 0;
+  //   // mySound.play();
 
-    return console.log({});
+  //   // return console.log({soundBank});
+  // }
+
+  function playSound(selector) {
+    // const thisAudio = document.getElementById(selector);
+    // thisAudio.play();
+    return console.log(selector)
   }
   
 
@@ -141,14 +147,13 @@ function App() {
             <div className="drum-pad" id="drum-pad-9">
               <audio src="media/Wilhelm Scream sound effect.mp3" className="clip" id="C" type="audio/mpeg"></audio>C
             </div> */}
-            {soundBank.map((drumPad) => (
-              <div className='drum-pad' id={soundBank.keyTrigger} onClick={clickSound}>
-                {soundBank.keyTrigger}
+            {soundBank.map((drumPad, i) => (
+              <div className='drum-pad' id={soundBank[i].keyTrigger} onClick={playSound}>
                 <audio 
                   className='clip'
-                  id={soundBank.keyTrigger}
-                  src={soundBank.audioKey}
-                ></audio>
+                  id={soundBank[i].keyTrigger}
+                  src={soundBank[i].audioKey}
+                ></audio>{soundBank[i].keyTrigger}
               </div>
             ))}
           </div>
