@@ -12,72 +12,81 @@ import WilhelmScream from "./Media/Wilhelm Scream sound effect.mp3";
 // import { Howl } from "howler"
 // import { click } from '@testing-library/user-event/dist/click';
 
-const audios = {
-  'audio0': new Audio(ArmorKlang),
-  'audio1': new Audio(BlueBlast),
-  'audio2': new Audio(BowSound),
-  'audio3': new Audio(KnifeStab),
-  'audio4': new Audio(GuardSweetRoll),
-  'audio5': new Audio(NewQuest),
-  'audio6': new Audio(ShakingDungeon),
-  'audio7': new Audio(SwordSlash),
-  'audio8': new Audio(WilhelmScream)
-} 
+// const audios = {
+//   'audio0': new Audio(ArmorKlang),
+//   'audio1': new Audio(BlueBlast),
+//   'audio2': new Audio(BowSound),
+//   'audio3': new Audio(KnifeStab),
+//   'audio4': new Audio(GuardSweetRoll),
+//   'audio5': new Audio(NewQuest),
+//   'audio6': new Audio(ShakingDungeon),
+//   'audio7': new Audio(SwordSlash),
+//   'audio8': new Audio(WilhelmScream)
+// } 
 
 const soundBank = [
   {
     keyCode: 81,
     keyTrigger: 'Q',
-    id: 'Armor-Klang',
-    audioKey: audios.audio0,
+    id: 'ArmorKlang',
+    // audioKey: audios.audio0,
+    audioKey: ArmorKlang
   },
   {
     keyCode: 87,
     keyTrigger: 'W',
-    id: 'Armor-Klang',
-    audioKey: audios.audio1,
+    id: 'BlueBlast',
+    // audioKey: audios.audio1,
+    audioKey: BlueBlast
   },
   {
     keyCode: 69,
     keyTrigger: 'E',
-    id: 'Armor-Klang',
-    audioKey: audios.audio2,
+    id: 'BowSound',
+    // audioKey: audios.audio2,
+    audioKey: BowSound
   },
   {
     keyCode: 65,
     keyTrigger: 'A',
-    id: 'Armor-Klang',
-    audioKey: audios.audio3,
+    id: 'KnifeStab',
+    // audioKey: audios.audio3,
+    audioKey: KnifeStab
   },
   {
     keyCode: 83,
     keyTrigger: 'S',
-    id: 'Armor-Klang',
-    audioKey: audios.audio4,
+    id: 'GuardSweetRoll',
+    // audioKey: audios.audio4,
+    audioKey: GuardSweetRoll
   },
   {
     keyCode: 68,
     keyTrigger: 'D',
-    id: 'Armor-Klang',
-    audioKey: audios.audio5,
+    id: 'NewQuest',
+    // audioKey: audios.audio5,
+    audioKey: NewQuest
   },
   {
     keyCode: 90,
     keyTrigger: 'Z',
-    id: 'Armor-Klang',
-    audioKey: audios.audio6,
+    id: 'ShakingDungeon',
+    // audioKey: audios.audio6,
+    audioKey: ShakingDungeon
   },
   {
     keyCode: 88,
     keyTrigger: 'X',
-    id: 'Armor-Klang',
-    audioKey: audios.audio7,
+    id: 'SwordsSlash',
+    // audioKey: audios.audio7,
+    audioKey: SwordSlash
   },
   {
     keyCode: 67,
     keyTrigger: 'C',
-    id: 'Armor-Klang',
-    audioKey: audios.audio8,
+    id: 'WilhelmScream',
+    // audioKey: audios.audio8,
+    audioKey: WilhelmScream
   }
 ]
 
@@ -97,6 +106,13 @@ function App() {
 
   // let mySound 
 
+  function playSound(selector) {
+    const mySound = document.getElementById(selector);
+    console.log(mySound);
+    mySound.currentTime = 0;
+    mySound.play();
+  }
+
   // const clickSound = () => {
   //   // mySound = new Audio(ArmorKlang);
   //   // document.getElementById("Q").play();
@@ -108,15 +124,19 @@ function App() {
   //   // return console.log({soundBank});
   // }
 
-  function playSound(ele) {
+  // let testSound = audios.audio3
+  // function playSound() {
+  // const playSound = () => {
     // const thisAudio = document.getElementById(selector);
-    const mySound = ele.target.children;
-    mySound.currentTime = 0;
-    mySound.play();
-    
+    // const mySound = ele.target.children;
+    // mySound.currentTime = 0;
+    // mySound.play();
+    // const testSound = audios.audio3.play();
+    // testSound.currentTime = 0;
+    // testSound.play();
     // return console.log(selector.target)
-    return console.log(mySound)
-  }
+    // return console.log(mySound)
+  // }
   
 
   return (
@@ -152,12 +172,20 @@ function App() {
               <audio src="media/Wilhelm Scream sound effect.mp3" className="clip" id="C" type="audio/mpeg"></audio>C
             </div> */}
             {soundBank.map((drumPad, i) => (
-              <div className='drum-pad' id={soundBank[i].keyTrigger} onClick={playSound}>
+              <div 
+                key={soundBank[i].id}
+                className='drum-pad' 
+                id={soundBank[i].id} 
+                onClick={() => {
+                playSound(soundBank[i].keyTrigger)
+              }}>
+                {soundBank[i].keyTrigger}
                 <audio 
                   className='clip'
                   id={soundBank[i].keyTrigger}
                   src={soundBank[i].audioKey}
-                ></audio>{soundBank[i].keyTrigger}
+                  // src={soundBank[i].id}
+                ></audio>
               </div>
             ))}
           </div>
