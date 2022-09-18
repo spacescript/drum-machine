@@ -51,6 +51,10 @@
         .drum-pad:active {
           background-color: #78b86b;
           transform: scale(.90);
+        } 
+        .drum-pad:focus-visible {
+          background-color: #78b86b;
+          transform: scale(.90);
         }
       }
       .options-menu {
