@@ -23,7 +23,7 @@ const soundBank = [
   {
     keyCode: 87,
     keyTrigger: 'W',
-    id: 'Blue Blast',
+    id: 'Magic Blast',
     audioKey: BlueBlast
   },
   {
