@@ -82,13 +82,21 @@ function App() {
   function playSound(selector) {
     const mySound = document.getElementById(selector);
     const colorizer = mySound.parentElement;
+    const display = document.getElementById('display');
+    const finder = colorizer.getAttribute('id');
+    // Needed for button animation
     function buttonReset() {
       colorizer.classList.remove('active')
     };
+    // Runs button animation
     colorizer.classList.add('active');
     setTimeout(buttonReset, 150);
+    // Runs audio
     mySound.currentTime = 0;
     mySound.play();
+    // Displays audio name
+    // display.innerHTML += {finder}
+    console.log(finder)
   }
 
   useEffect(() => {
@@ -113,7 +121,7 @@ function App() {
             {soundBank.map((drumPad, i) => (
               <div 
                 key={soundBank[i].audioKey}
-                className='drum-pad' 
+                className='drum-pad'
                 id={soundBank[i].audioKey} 
                 // onKeyDown={handleKeyPress}
                 onClick={() => {
