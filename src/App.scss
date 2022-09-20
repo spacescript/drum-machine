@@ -48,11 +48,15 @@
         .drum-pad:hover {
           cursor: pointer;
         }
-        .drum-pad:active {
-          background-color: #78b86b;
-          transform: scale(.90);
-        } 
-        .drum-pad:focus-visible {
+        // .drum-pad:active {
+        //   background-color: #78b86b;
+        //   transform: scale(.90);
+        // } 
+        // .drum-pad:focus-visible {
+        //   background-color: #78b86b;
+        //   transform: scale(.90);
+        // }
+        .active {
           background-color: #78b86b;
           transform: scale(.90);
         }

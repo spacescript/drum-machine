@@ -17,55 +17,55 @@ const soundBank = [
   {
     keyCode: 81,
     keyTrigger: 'Q',
-    id: 'ArmorKlang',
+    id: 'Armor Klang',
     audioKey: ArmorKlang
   },
   {
     keyCode: 87,
     keyTrigger: 'W',
-    id: 'BlueBlast',
+    id: 'Blue Blast',
     audioKey: BlueBlast
   },
   {
     keyCode: 69,
     keyTrigger: 'E',
-    id: 'BowSound',
+    id: 'Bow Sound',
     audioKey: BowSound
   },
   {
     keyCode: 65,
     keyTrigger: 'A',
-    id: 'KnifeStab',
+    id: 'Knife Stab',
     audioKey: KnifeStab
   },
   {
     keyCode: 83,
     keyTrigger: 'S',
-    id: 'GuardSweetRoll',
+    id: 'Guard Sweet Roll',
     audioKey: GuardSweetRoll
   },
   {
     keyCode: 68,
     keyTrigger: 'D',
-    id: 'NewQuest',
+    id: 'New Quest',
     audioKey: NewQuest
   },
   {
     keyCode: 90,
     keyTrigger: 'Z',
-    id: 'ShakingDungeon',
+    id: 'Shaking Dungeon',
     audioKey: ShakingDungeon
   },
   {
     keyCode: 88,
     keyTrigger: 'X',
-    id: 'SwordsSlash',
+    id: 'Swords Slash',
     audioKey: SwordSlash
   },
   {
     keyCode: 67,
     keyTrigger: 'C',
-    id: 'WilhelmScream',
+    id: 'Wilhelm Scream',
     audioKey: WilhelmScream
   }
 ]
@@ -81,7 +81,12 @@ function App() {
   
   function playSound(selector) {
     const mySound = document.getElementById(selector);
-    // console.log(mySound);
+    const colorizer = mySound.parentElement;
+    function buttonReset() {
+      colorizer.classList.remove('active')
+    };
+    colorizer.classList.add('active');
+    setTimeout(buttonReset, 150);
     mySound.currentTime = 0;
     mySound.play();
   }
@@ -107,9 +112,9 @@ function App() {
           <div className="button-panel" id="button-panel">
             {soundBank.map((drumPad, i) => (
               <div 
-                key={soundBank[i].id}
+                key={soundBank[i].audioKey}
                 className='drum-pad' 
-                id={soundBank[i].id} 
+                id={soundBank[i].audioKey} 
                 // onKeyDown={handleKeyPress}
                 onClick={() => {
                 playSound(soundBank[i].keyTrigger)
